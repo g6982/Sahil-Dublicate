@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+<!--        <template id="template"  inherit_id="account_accountant.template">-->
+<!--                <t t-extend="account_accountant.reconciliation.line.create">-->
+<!--                <t t-jquery="o_group" t-operation="after">-->
+<!--                    <table class="o_group o_inner_group o_group_col_6">-->
+<!--                    <tbody>-->
+<!--                        <tr class="create_account_id">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Accountssssssssss</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_tax_id">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Taxessssssssss</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_analytic_account_id" t-if="group_tags">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Analytic Acc.</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_analytic_tag_ids" t-if="group_tags">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Analytic Tags.</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--                    <table class="o_group o_inner_group o_group_col_6">-->
+<!--                    <tbody>-->
+<!--                        <tr class="create_journal_id" style="display: none;">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Journalsssssssssssss</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_label">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Labelssssssssss</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_amount">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Amountssssssssssss</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_force_tax_included d-none">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Tax Included in Price</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_date d-none">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">Writeoff Date</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+<!--                        <tr class="create_to_check">-->
+<!--                            <td class="o_td_label"><label class="o_form_label">To Check</label></td>-->
+<!--                            <td class="o_td_field"></td>-->
+<!--                        </tr>-->
+
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--                </t>-->
+<!--            </t>-->
+<!--        </template>-->
+    </data>
+</odoo>

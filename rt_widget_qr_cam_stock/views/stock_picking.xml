@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+               
+
+
+    <record id="rt_widget_qr_cam_stock_view_picking_form" model="ir.ui.view">
+        <field name="name">rt.widget.gr.cam.stock.view.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+			<!-- Operations -->
+            <xpath expr="//field[@name='move_ids_without_package']/form//field[@name='product_id']" position="attributes">
+                <attribute name="widget">rt_widget_field_many2one_qr_cam</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='move_ids_without_package']/tree//field[@name='product_id']" position="attributes">
+                <attribute name="widget">rt_widget_field_many2one_qr_cam</attribute>
+            </xpath>
+
+			<!-- Source Location Parent Field-->
+            <xpath expr="//field[@name='location_id']" position="attributes">
+                <attribute name="widget">rt_widget_field_many2one_qr_cam</attribute>
+            </xpath>
+			
+			<!-- Destination Location Parent Field-->	
+            <xpath expr="//field[@name='location_dest_id']" position="attributes">
+                <attribute name="widget">rt_widget_field_many2one_qr_cam</attribute>
+            </xpath>					
+
+
+        </field>
+    </record>
+
+
+
+
+
+</odoo>

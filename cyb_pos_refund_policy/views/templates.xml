@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="assets" inherit_id="point_of_sale.assets_common">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/cyb_pos_refund_policy/static/src/js/refund_debug.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

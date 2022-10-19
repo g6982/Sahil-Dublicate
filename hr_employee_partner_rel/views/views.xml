@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="inherit_customer_form" model="ir.ui.view">
+            <field name="name">inherit customer form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='function']" position="before">
+                    <field name="employee_id" readonly="1" attrs="{'invisible': [('company_type','!=','person')]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_res_partner_filter_assign_tree" model="ir.ui.view">
+        <field name="name">res.partner.geo.inherit.tree</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="display_name" position="after">
+                <field name="employee_id" readonly="1" optional="show"/>
+            </field>
+        </field>
+    </record>
+    <record model="ir.actions.server" id="action_update_employee_partner_id">
+            <field name="name">Update Partner Address</field>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="binding_model_id" ref="model_res_partner" />
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                    action = records.action_update_employee_partner_id()
+            </field>
+        </record>
+    </data>
+</odoo>

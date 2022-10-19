@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rt_widget_qr_cam_account_view_order_form" model="ir.ui.view">
+        <field name="name">rt.widget.gr.cam.account.view.order.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/form//field[@name='product_id']" position="attributes">
+                <attribute name="widget">rt_widget_field_many2one_qr_cam</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']/tree//field[@name='product_id']" position="attributes">
+                <attribute name="widget">rt_widget_field_many2one_qr_cam</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+
+
+
+   
+
+
+</odoo>

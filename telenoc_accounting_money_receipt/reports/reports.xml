@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+                id="report_money_receipt"
+                model="money.receipt"
+                report_type="qweb-html"
+                string="Money Receipt"
+                name="telenoc_accounting_money_receipt.money_receipt_report"
+                file="telenoc_accounting_money_receipt.money_receipt_report"
+                print_report_name="'Receipt %s' % (object.name)"
+        />
+    </data>
+</odoo>

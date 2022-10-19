@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_label_layout_form_inh" model="ir.ui.view">
+        <field name="name">product.label.layout.form.inh</field>
+        <field name="model">product.label.layout</field>
+        <field name="inherit_id" ref="product.product_label_layout_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//field[@name="extra_html"]' position="attributes">
+                <attribute name="attrs">
+                    {'invisible': [('print_format', 'not in', ('dymo', 'sahil', '2x7xprice','5x6xcustom'))]}
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

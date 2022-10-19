@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Category -->
+    <record model="ir.module.category" id="money_receipt_category">
+        <field name="name">Money Receipt</field>
+        <field name="parent_id" ref="base.module_category_accounting_accounting"/>
+        <field name="sequence">3</field>
+    </record>
+    <!-- USERS-->
+    <record id="group_money_receipt_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="comment">The user will be able to manager Money Receipts Crud.</field>
+        <field name="category_id" ref="telenoc_accounting_money_receipt.money_receipt_category"/>
+    </record>
+    <record id="group_money_receipt_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="comment">The user will be able to manager Money Receipts Crud and also it's types.</field>
+        <field name="category_id" ref="telenoc_accounting_money_receipt.money_receipt_category"/>
+        <field name="implied_ids" eval="[(4, ref('telenoc_accounting_money_receipt.group_money_receipt_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+</odoo>
